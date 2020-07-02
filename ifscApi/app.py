@@ -8,8 +8,8 @@ app = Flask(__name__)
 api = Api(app)
 
 
-db_file = 'db/ifsc.db'
-
+# db_file = 'db/ifsc.db'
+db_file = 'ifsc.db'
 
 def create_connection(db_file):
     """ create a database connection to the SQLite database
