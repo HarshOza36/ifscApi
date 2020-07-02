@@ -10,6 +10,7 @@ setup(name='ifscApi',
           'flask-restful'
       ],url="https://github.com/ceddlyburge/python_world",
     packages=find_packages(),
+    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
