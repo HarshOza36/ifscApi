@@ -1,15 +1,21 @@
-from setuptools import setup,find_namespace_packages
+from setuptools import setup,find_namespace_packages,find_packages
 setup(name='ifscApi',
-      version='0.1',
+      version='0.0.1',
       description='Api for Ifsc',
-      url='#',
       author='harsh',
-      author_email='harshoza36@gmail.com',
+      author_email='harshoza3636@gmail.com',
       license='MIT',
       install_requires=[
           'flask',
           'flask-restful'
-      ],
-      packages=find_namespace_packages(include=['ifscApi.*']),
-      zip_safe=False)
+      ],url="https://github.com/ceddlyburge/python_world",
+    packages=find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ]
+  )
+#       packages=find_namespace_packages(include=['ifscApi.*']),
+#       zip_safe=False)
 # ['ifscApi']
