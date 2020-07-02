@@ -9,8 +9,9 @@ api = Api(app)
 
 
 # db_file = 'db/ifsc.db'
-db_file = 'ifsc.db'
-
+# db_file = 'ifsc.db'
+dirname = os.path.dirname(__file__)
+db_file = dirname+'\\ifsc.db'
 def create_connection(db_file):
     """ create a database connection to the SQLite database
         specified by the db_file
