@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup,find_namespace_packages
 setup(name='ifscApi',
       version='0.1',
       description='Api for Ifsc',
