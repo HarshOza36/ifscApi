@@ -10,6 +10,6 @@ setup(name='ifscApi',
           'flask',
           'flask-restful'
       ],
-      packages=find_namespace_packages(include=['mynamespace.*']),
+      packages=find_namespace_packages(include=['ifscApi.*']),
       zip_safe=False)
-['ifscApi']
+# ['ifscApi']
