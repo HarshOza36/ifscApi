@@ -60,8 +60,7 @@ class FetchData():
         else:
 #             print("IFSC:"+str(x)+" BANK:"+str(a[1])+" ADDRESS:"+str(a[2]))
             end = timeit.default_timer()
-            retMap = {'status': 200, 'IFSC': str(x), 'BANK': str(
-                a[1]), 'ADDRESS': str(a[2]), 'timeTOFetch': end-start}
+            retMap = {'IFSC': str(x), 'BANK': str(a[1]), 'ADDRESS': str(a[2]), 'timeTOFetch': end-start}
             response = json.dumps(retMap)
 
         print('Time:{}s to fetch'.format(end-start))
