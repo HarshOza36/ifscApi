@@ -1,2 +1,2 @@
 include ifscApi/db/ifsc.db
-include ifscApi/ifsc.db
+include ifscApi/ifsc2.db
