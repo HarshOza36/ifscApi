@@ -8,7 +8,8 @@ setup(name='ifscApi',
       install_requires=[
           'flask',
           'flask-restful'
-      ],url="https://github.com/ceddlyburge/python_world",
+      ],
+      url="https://github.com/HarshOza36/ifsc_api",
     packages=find_packages(),
     include_package_data=True,
     classifiers=[
