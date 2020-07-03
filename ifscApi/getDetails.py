@@ -3,7 +3,8 @@ import timeit
 import os
 import json
 dirname = os.path.dirname(__file__)
-db_file = dirname+'\\ifsc2.db'
+
+
 def create_connection(db_file):
     """ create a database connection to the SQLite database
         specified by the db_file
@@ -37,8 +38,9 @@ def select_task_by_priority(conn, priority):
 
 
 class FetchData():
-    def getdata(self,ifsc):
+    def getdata(self,ifsc,dbfilePath):
         x = ifsc
+        db_file = str(dbfilePath)
         # Establishing a connection
         conn = create_connection(db_file)
         retMap = {}
