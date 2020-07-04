@@ -36,7 +36,7 @@ def select_task_by_priority(conn, priority):
 #         print(row)
         return(row)
 
-dbfilePath='files/ifsc2.db'
+dbfilePath='ifsc2.db'
 class FetchData():
     def getdata(self,ifsc):
         x = ifsc
