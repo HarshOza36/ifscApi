@@ -1,6 +1,7 @@
 # ifsc_api
 
 ![Python package](https://github.com/HarshOza36/ifsc_api/workflows/Python%20package/badge.svg)
+![Python application](https://github.com/HarshOza36/ifsc_api/workflows/Python%20application/badge.svg)
 
 # Documentation
 
