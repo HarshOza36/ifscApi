@@ -38,7 +38,7 @@ def select_task_by_priority(conn, priority):
 
 dbfilePath='ifsc2.db'
 class FetchData():
-    def getdata(self,ifsc):
+    def getdata(self,ifsc,dbfilePath):
         x = ifsc
         db_file = str(dbfilePath)
         # Establishing a connection
