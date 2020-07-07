@@ -33,12 +33,12 @@ def select_task_by_priority(conn, priority):
     rows = cur.fetchall()
 
     for row in rows:
-#         print(row)
+        #         print(row)
         return(row)
 
-dbfilePath='ifsc2.db'
+
 class FetchData():
-    def getdata(self,ifsc,dbfilePath):
+    def getdata(self, ifsc, dbfilePath='ifsc2.db'):
         x = ifsc
         db_file = str(dbfilePath)
         # Establishing a connection
@@ -58,9 +58,10 @@ class FetchData():
             }
             response = json.dumps(retMap)
         else:
-#             print("IFSC:"+str(x)+" BANK:"+str(a[1])+" ADDRESS:"+str(a[2]))
+            #             print("IFSC:"+str(x)+" BANK:"+str(a[1])+" ADDRESS:"+str(a[2]))
             end = timeit.default_timer()
-            retMap = {'IFSC': str(x), 'BANK': str(a[1]), 'ADDRESS': str(a[2]), 'timeTOFetch': end-start}
+            retMap = {'IFSC': str(x), 'BANK': str(
+                a[1]), 'ADDRESS': str(a[2]), 'timeTOFetch': end-start}
             response = json.dumps(retMap)
 
         print('Time:{}s to fetch'.format(end-start))
