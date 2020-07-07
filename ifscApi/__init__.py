@@ -1,5 +1,4 @@
-from .app import runServer
-from .getDetails import FetchData
-name='ifscApi'
-
-
+from ifscApi.app import runServer
+from ifscApi.getDetails import FetchData
+from ifscApi.getDetailsLambda import FetchData
+name = 'ifscApi'
