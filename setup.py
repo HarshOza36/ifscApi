@@ -5,7 +5,7 @@ this_directory = path.abspath(path.dirname(__file__))
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 setup(name='ifscApi',
-      version='0.1',
+      version='0.2',
       description='Api for Ifsc',
       long_description=long_description,
       long_description_content_type='text/markdown',
@@ -17,7 +17,7 @@ setup(name='ifscApi',
           'flask-restful'
       ],
       url="https://github.com/HarshOza36/ifsc_api",
-      download_url='https://github.com/HarshOza36/ifscApi/archive/v_01.tar.gz',
+      download_url='https://github.com/HarshOza36/ifscApi/archive/v_02.tar.gz',
       keywords=['IFSC Code', 'IFSC', 'Bank IFSC Codes'],
       packages=find_packages(),
       include_package_data=True,
