@@ -1,2 +1,3 @@
 include ifscApi/db/ifsc.db
 include ifscApi/ifsc2.db
+include ifscApi/templates/index.html

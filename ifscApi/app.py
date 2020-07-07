@@ -80,13 +80,58 @@ class fetchData(Resource):
         return response
 
 
+@app.route('/')
+def index():
+    return(render_template("index.html"))
+
+
+@app.route('/getit', methods=['GET', 'POST'])
+def getit():
+    x = request.form['ifsc']
+
+    # Establishing a connection
+    conn = create_connection(db_file)
+
+    retMap = {}
+    a = None
+    start = timeit.default_timer()
+    a = select_task_by_priority(conn, str(x))
+    if(a == None):
+        print("Sorry ifsc doesnt exist")
+        end = timeit.default_timer()
+        retMap = {
+            'status': 400,
+            'IFSC': str(x),
+            'details': 'Sorry ifsc not found',
+            'timeTOFetch': end-start
+        }
+        response = jsonify(retMap)
+        print(response)
+        ifsc = str(x)
+        bank = 'Not Found'
+        add = 'Not Found'
+        return(render_template("index.html", bank=bank, add=add, ifsc=ifsc))
+    else:
+        end = timeit.default_timer()
+        retMap = {'status': 200, 'IFSC': str(x), 'BANK': str(
+            a[1]), 'ADDRESS': str(a[2]), 'timeTOFetch': end-start}
+        response = jsonify(retMap)
+        print('Time:{}s to fetch'.format(end-start))
+        print(response)
+        ifsc = str(x)
+        bank = str(a[1])
+        add = str(a[2])
+        # return response
+        return(render_template("index.html", bank=bank, add=add, ifsc=ifsc))
+
+
 api.add_resource(fetchData, '/ifsc')
 
 
 def runServer():
     #    if __name__ == "__main__":
     print("[INFO] Server will start ...")
-    app.run(debug=False)
+    app.run(debug=True)
 
 
 if __name__ == "__main__":
