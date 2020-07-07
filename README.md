@@ -1,5 +1,6 @@
 # ifsc_api
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Python package](https://github.com/HarshOza36/ifsc_api/workflows/Python%20package/badge.svg)
 ![Python application](https://github.com/HarshOza36/ifsc_api/workflows/Python%20application/badge.svg)
 
