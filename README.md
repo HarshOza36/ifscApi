@@ -8,7 +8,7 @@
 
 IFSC API was build to get details of ```BANK``` and the ```ADDRESS OF THE BANK``` from the IFSC CODE quickly.
 
-This library was build specially for Arihant Capital Pvt. Ltd.
+This library was build specially for Arihant Capital Markets Ltd.
 
 # Installation:
 ```pip install git+https://github.com/HarshOza36/ifsc_api.git```
